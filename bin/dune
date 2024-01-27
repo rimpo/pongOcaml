@@ -1,0 +1,4 @@
+(executable
+ (public_name pong)
+ (name main)
+ (libraries pong raylib))
