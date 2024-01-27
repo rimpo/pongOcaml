@@ -88,13 +88,14 @@ let bounce_ball_if_hitting_pedal game =
        { x = ball.pos.x - ball.radius + ball.vec.x; y = ball.pos.y + ball.vec.y }
        left_pedal
   then (
-    print_endline "hit! left pedal";
+    (* ball hit left pedal*)
     ball.pos.x <- left_pedal.pos.x + left_pedal.width + ball.radius;
     ball.vec.x <- -1 * ball.vec.x);
   if point_inside_rectangle
        { x = ball.pos.x + ball.radius + ball.vec.x; y = ball.pos.y + ball.vec.y }
        right_pedal
   then (
+    (* ball hit right pedal*)
     ball.pos.x <- right_pedal.pos.x - ball.radius;
     ball.vec.x <- -1 * ball.vec.x)
 ;;
